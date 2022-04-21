@@ -15,13 +15,13 @@
                 <tr>
                     <th></th>
                     <th>Customer</th>
-                    <th>Orders</th>
+                    <th>Phone</th>
                 </tr>
                 {% for customer in customers %}
                     <tr>
-                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                        <td><a href="{% url 'customer' customer.id %}" class="btn btn-info btn-sm">View</a></td>
                         <td>{{customer.name}}</td>
-                        <td>{{customer.orders}}</td>
+                        <td>{{customer.phone}}</td>
                     </tr>
                 {% endfor %}
             </table>

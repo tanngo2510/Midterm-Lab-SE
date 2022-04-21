@@ -17,6 +17,13 @@
                     <th>Customer</th>
                     <th>Orders</th>
                 </tr>
+                {% for customer in customers %}
+                    <tr>
+                        <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                        <td>{{customer.name}}</td>
+                        <td>{{customer.orders}}</td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </div>
@@ -34,6 +41,15 @@
                     <th>Update</th>
                     <th>Remove</th>
                 </tr>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{order.product}}</td>
+                        <td>{{order.date_created}}</td>
+                        <td>{{order.status}}</td>
+                        <td><a href="">Update</a></td>
+                        <td><a href="">Delete</a></td>
+                    </tr>
+                {% endfor %}
             </table>
         </div>
     </div>

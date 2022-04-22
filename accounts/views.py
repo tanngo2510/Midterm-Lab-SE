@@ -89,6 +89,21 @@ def userPage(request):
 
 
 @login_required(login_url='login')
+@allowed_users(allowed_roles=['customer', 'admin'])
+def accountSettings(request):
+    customer = request.user.customer
+    form = CustomerForm(instance=customer)
+
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, request.FILES, instance=customer)
+        if form.is_valid():
+            form.save()
+
+    context = {'form': form}
+    return render(request, 'accounts/account_settings.html', context)
+
+
+@login_required(login_url='login')
 @admin_only
 def products(request):
     products = Product.objects.all()

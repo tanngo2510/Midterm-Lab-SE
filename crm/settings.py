@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!m6#a43(s2a@tfk847a9%g%&eh!-2k1zw=g)l4+(a$@mcx_-75
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hexro-crm.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -141,5 +141,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hexro99@gmail.com'
-EMAIL_HOST_PASSWORD = 'Nhattan2510'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
